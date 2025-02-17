@@ -1,6 +1,11 @@
 import { TemplateRef } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { Breadcrumb } from './breadcrumb';
+
+export interface Context<C> {
+    $implicit: C;
+}
+export interface BreadcrumbItemContext extends Context<MenuItem> {}
 /**
  * Defines valid templates in Breadcumb.
  * @group Templates
